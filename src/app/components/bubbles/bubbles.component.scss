@@ -1,0 +1,111 @@
+@import '~sass/variables';
+@import "~sass/mixins";
+
+
+.bubbles{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    -webkit-transform: translateZ(0);
+            transform: translateZ(0);
+
+    li{
+        position: absolute;
+        list-style: none;
+        display: block;
+        background: lighten($customBackground, 50);
+        opacity: .2;
+        bottom: -100px;
+        -webkit-animation: bubble 20s infinite;
+                animation: bubble 20s infinite;
+        -webkit-transition-timing-function: linear;
+             -o-transition-timing-function: linear;
+                transition-timing-function: linear;
+        z-index: 0;
+
+        &:nth-child(1){
+            width: 40px;
+            height: 40px;
+            left: 18%;
+        }
+
+        &:nth-child(2){
+            width: 60px;
+            height: 60px;
+            left: 37%;
+            -webkit-animation-delay: 2s;
+                    animation-delay: 2s;
+            -webkit-animation-duration: 17s;
+                    animation-duration: 17s;
+        }
+        &:nth-child(3){
+            width: 19px;
+            height: 19px;
+            left: 54%;
+            -webkit-animation-delay: 3s;
+                    animation-delay: 3s;
+            -webkit-animation-duration: 12s;
+                    animation-duration: 12s;
+        }
+        &:nth-child(4){
+            width: 30px;
+            height: 30px;
+            left: 64%;
+            -webkit-animation-delay: 2.5s;
+                    animation-delay: 2.5s;
+            -webkit-animation-duration: 20s;
+                    animation-duration: 20s;
+        }
+        &:nth-child(5){
+            width: 78px;
+            height: 78px;
+            left: 70%;
+            -webkit-animation-delay: 1s;
+                    animation-delay: 1s;
+            -webkit-animation-duration: 22s;
+                    animation-duration: 22s;
+        }
+        &:nth-child(6){
+            width: 24px;
+            height: 24px;
+            left: 89%;
+            -webkit-animation-delay: 3s;
+                    animation-delay: 3s;
+            -webkit-animation-duration: 16s;
+                    animation-duration: 16s;
+        }
+        &:nth-child(7){
+                width: 20px;
+                height: 20px;
+                left: 13%;
+                -webkit-animation-delay: 1.6s;
+                        animation-delay: 1.6s;
+                -webkit-animation-duration: 16s;
+                        animation-duration: 16s;
+            }
+    }
+
+    @-webkit-keyframes bubble {
+        0% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+        }
+        100%{
+            -webkit-transform: translateY(-2000px) rotate(900deg);
+                    transform: translateY(-2000px) rotate(900deg);
+        }
+    }
+
+    @keyframes bubble {
+        0% {
+            -webkit-transform: translateY(0);
+                    transform: translateY(0);
+        }
+        100%{
+            -webkit-transform: translateY(-2000px) rotate(900deg);
+                    transform: translateY(-2000px) rotate(900deg);
+        }
+    }
+}
